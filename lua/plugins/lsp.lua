@@ -2,7 +2,6 @@ local available_servers = {
   "lua_ls",
 }
 
-
 return {
   {
     "neovim/nvim-lspconfig",

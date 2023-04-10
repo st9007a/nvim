@@ -8,6 +8,8 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.setqflist)
 
+vim.keymap.set('n', '`', ':NvimTreeToggle<CR>')
+
 
 local M = {}
 
