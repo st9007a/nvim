@@ -1,6 +1,7 @@
 local available_servers = {
   "lua_ls",
   "gopls",
+  "pyright",
 }
 
 return {
@@ -62,22 +63,34 @@ return {
     event = "LspAttach",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "lewis6991/gitsigns.nvim",
     },
-    opts = {},
-    config = function(_, opts)
+    config = function(_)
       local null_ls = require("null-ls")
-      opts["sources"] = {
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.trim_whitespace.with({
-          disabled_filetypes = { "rust", "go" },
-        }),
-        null_ls.builtins.formatting.trim_newlines.with({
-          disabled_filetypes = { "rust", "go" },
-        }),
-        null_ls.builtins.code_actions.gitsigns,
-      }
+      local u = require("null-ls.utils")
 
-      null_ls.setup(opts)
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.trim_whitespace.with({
+            disabled_filetypes = { "rust", "go" },
+          }),
+          null_ls.builtins.formatting.trim_newlines.with({
+            disabled_filetypes = { "rust", "go" },
+          }),
+          null_ls.builtins.code_actions.gitsigns,
+        },
+        root_dir = u.root_pattern(
+          ".null-ls-root",
+          "Makefile",
+          ".git",
+          "pyproject.toml",
+          "setup.py",
+          "setup.cfg",
+          "Cargo.toml",
+          "go.mod"
+         ),
+      })
     end,
   },
 

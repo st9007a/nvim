@@ -47,7 +47,6 @@ return {
         ignore = false,
       },
       view = {
-        hide_root_folder = true,
         width = 25,
         mappings = {
           list = {
@@ -68,6 +67,7 @@ return {
         enable = true,
       },
       renderer = {
+        root_folder_label = false,
         icons = {
           show = {
             git = false,
