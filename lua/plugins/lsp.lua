@@ -56,4 +56,38 @@ return {
       end
     end,
   },
+
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "LspAttach",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {},
+    config = function(_, opts)
+      local null_ls = require("null-ls")
+      opts["sources"] = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.trim_whitespace.with({
+          disabled_filetypes = { "rust", "go" },
+        }),
+        null_ls.builtins.formatting.trim_newlines.with({
+          disabled_filetypes = { "rust", "go" },
+        }),
+        null_ls.builtins.code_actions.gitsigns,
+      }
+
+      null_ls.setup(opts)
+    end,
+  },
+
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+    opts = {},
+  },
 }
