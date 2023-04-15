@@ -37,11 +37,9 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
-      "onsails/lspkind.nvim",
     },
     opts = function()
       local cmp = require("cmp")
-      local lspkind = require("lspkind")
       return {
         completion = {
           completeopt = "menu,menuone,noinsert",
@@ -70,13 +68,6 @@ return {
           { name = "buffer" },
           { name = "path" },
         }),
-        formatting = {
-          format = lspkind.cmp_format({
-            mode = 'symbol_text',
-            maxwidth = 30,
-            ellipsis_char = '...',
-          }),
-        },
         experimental = {
           ghost_text = {
             hl_group = "LspCodeLens",

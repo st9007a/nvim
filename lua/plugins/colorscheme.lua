@@ -4,7 +4,7 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
-      flavour = "mocha",      
+      flavour = "mocha",
     },
     config = function(lazyplugin, opts)
       require(lazyplugin.name).setup(opts)

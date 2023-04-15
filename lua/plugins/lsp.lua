@@ -98,9 +98,19 @@ return {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     dependencies = {
-      { "nvim-tree/nvim-web-devicons" },
-      { "nvim-treesitter/nvim-treesitter" },
+      "nvim-tree/nvim-web-devicons",
+      "nvim-treesitter/nvim-treesitter",
     },
-    opts = {},
+    opts = {
+      lightbulb = {
+        enable = false,
+      },
+      outline = {
+        keys = {
+          expand_or_jump = '<CR>',
+          quit = '<ESC>',
+        },
+      },
+    },
   },
 }
