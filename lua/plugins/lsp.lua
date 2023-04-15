@@ -65,11 +65,11 @@ return {
       "nvim-lua/plenary.nvim",
       "lewis6991/gitsigns.nvim",
     },
-    config = function(_)
+    opts = function ()
       local null_ls = require("null-ls")
       local u = require("null-ls.utils")
 
-      null_ls.setup({
+      return {
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.trim_whitespace.with({
@@ -88,9 +88,11 @@ return {
           "setup.py",
           "setup.cfg",
           "Cargo.toml",
-          "go.mod"
-         ),
-      })
+          "go.mod",
+          "stylua.toml",
+          ".editorconfig"
+        ),
+      }
     end,
   },
 
@@ -102,13 +104,16 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
+      rename = {
+        quit = "<ESC>",
+      },
       lightbulb = {
         enable = false,
       },
       outline = {
         keys = {
-          expand_or_jump = '<CR>',
-          quit = '<ESC>',
+          expand_or_jump = "<CR>",
+          quit = "<ESC>",
         },
       },
     },
