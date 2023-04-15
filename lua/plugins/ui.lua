@@ -6,14 +6,24 @@ return {
     'akinsho/bufferline.nvim',
     lazy = false,
     version = "v3.*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
     opts = {
       options = {
         themable = true,
-        separator_style = 'slant',
         show_buffer_close_icons = false,
       },
     },
+  },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    opts = {},
   },
 
   {

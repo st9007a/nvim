@@ -1,5 +1,6 @@
 local available_servers = {
   "lua_ls",
+  "gopls",
 }
 
 return {
