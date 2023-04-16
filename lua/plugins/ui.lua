@@ -3,11 +3,11 @@ vim.g.loaded_netrwPlugin = 1
 
 return {
   {
-    'akinsho/bufferline.nvim',
+    "akinsho/bufferline.nvim",
     lazy = false,
     version = "v3.*",
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
       options = {
@@ -21,7 +21,7 @@ return {
     "nvim-lualine/lualine.nvim",
     lazy = false,
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {},
   },
@@ -50,11 +50,11 @@ return {
         width = 25,
         mappings = {
           list = {
-              { key = 'v', action = 'vsplit' },
-              { key = 's', action = 'split' },
-              { key = 'rm', action = 'remove' },
-              { key = 'dd', action = 'cut' },
-              { key = 'yy', action = 'copy' },
+            { key = "v", action = "vsplit" },
+            { key = "s", action = "split" },
+            { key = "rm", action = "remove" },
+            { key = "dd", action = "cut" },
+            { key = "yy", action = "copy" },
           },
         },
       },

@@ -3,6 +3,10 @@ vim.keymap.set('n', '<Tab>', '<C-w>w')
 
 vim.keymap.set('n', '`', ':NvimTreeToggle<CR>')
 
+vim.keymap.set('n', '<space>b', ':Telescope buffers<CR>')
+vim.keymap.set('n', '<space>s', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<space>g', ':Telescope live_grep<CR>')
+
 
 local M = {}
 
