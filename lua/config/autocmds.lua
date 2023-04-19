@@ -28,6 +28,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "cpp",
     "cuda",
     "java",
+    "dockerfile",
   },
   callback = function()
     vim.opt_local.expandtab = true
