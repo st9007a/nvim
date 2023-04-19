@@ -2,6 +2,8 @@ local available_servers = {
   "lua_ls",
   "gopls",
   "pyright",
+  "rust-analyzer",
+  "tsserver",
 }
 
 return {
