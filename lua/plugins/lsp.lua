@@ -2,7 +2,7 @@ local available_servers = {
   "lua_ls",
   "gopls",
   "pyright",
-  "rust-analyzer",
+  "rust_analyzer",
   "tsserver",
 }
 
@@ -87,6 +87,8 @@ return {
           "Makefile",
           ".git",
           "pyproject.toml",
+          "package.json",
+          "package-lock.json",
           "setup.py",
           "setup.cfg",
           "Cargo.toml",
