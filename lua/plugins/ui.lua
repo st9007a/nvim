@@ -48,15 +48,6 @@ return {
       },
       view = {
         width = 25,
-        mappings = {
-          list = {
-            { key = "v", action = "vsplit" },
-            { key = "s", action = "split" },
-            { key = "rm", action = "remove" },
-            { key = "dd", action = "cut" },
-            { key = "yy", action = "copy" },
-          },
-        },
       },
       actions = {
         open_file = {
