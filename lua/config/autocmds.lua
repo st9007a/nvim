@@ -11,6 +11,8 @@ vim.api.nvim_create_autocmd("FileType", {
     "yaml",
     "markdown",
     "json",
+    "c",
+    "cpp",
   },
   callback = function()
     vim.opt_local.expandtab = true
@@ -24,8 +26,6 @@ vim.api.nvim_create_autocmd("FileType", {
     "sh",
     "python",
     "rust",
-    "c",
-    "cpp",
     "cuda",
     "java",
     "dockerfile",

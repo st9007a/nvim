@@ -27,10 +27,12 @@ M.setup_lsp_keymap = function(ev)
 
   vim.keymap.set("n", "<leader>r", ":Lspsaga rename<CR>", opts)
   vim.keymap.set("n", "<leader>a", ":Lspsaga code_action<CR>", opts)
-  vim.keymap.set("n", "<leader>l", ":Lspsaga lsp_finder<CR>", opts)
+  vim.keymap.set("n", "<leader>l", ":Lspsaga finder<CR>", opts)
   vim.keymap.set("n", "<leader>t", ":Lspsaga outline<CR>", opts)
   vim.keymap.set("n", "<leader>e", ":Lspsaga show_line_diagnostics<CR>", opts)
   vim.keymap.set("n", "<leader>d", ":Lspsaga show_buf_diagnostics<CR>", opts)
+  vim.keymap.set("n", "<leader>i", ":Lspsaga incoming_calls<CR>", opts)
+  vim.keymap.set("n", "<leader>o", ":Lspsaga outgoing_calls<CR>", opts)
   vim.keymap.set("n", "[d", ":Lspsaga diagnostic_jump_prev<CR>", opts)
   vim.keymap.set("n", "]d", ":Lspsaga diagnostic_jump_next<CR>", opts)
 

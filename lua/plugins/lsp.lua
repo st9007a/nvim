@@ -2,6 +2,7 @@ local available_servers = {
   "lua_ls",
   "gopls",
   "pyright",
+  "ruff_lsp",
   "rust_analyzer",
   "tsserver",
 }
@@ -61,47 +62,7 @@ return {
   },
 
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = "LspAttach",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "lewis6991/gitsigns.nvim",
-    },
-    opts = function ()
-      local null_ls = require("null-ls")
-      local u = require("null-ls.utils")
-
-      return {
-        sources = {
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.trim_whitespace.with({
-            disabled_filetypes = { "rust", "go" },
-          }),
-          null_ls.builtins.formatting.trim_newlines.with({
-            disabled_filetypes = { "rust", "go" },
-          }),
-          null_ls.builtins.code_actions.gitsigns,
-        },
-        root_dir = u.root_pattern(
-          ".null-ls-root",
-          "Makefile",
-          ".git",
-          "pyproject.toml",
-          "package.json",
-          "package-lock.json",
-          "setup.py",
-          "setup.cfg",
-          "Cargo.toml",
-          "go.mod",
-          "stylua.toml",
-          ".editorconfig"
-        ),
-      }
-    end,
-  },
-
-  {
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     dependencies = {
       "nvim-tree/nvim-web-devicons",

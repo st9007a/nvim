@@ -20,6 +20,10 @@ local root_files = {
 return {
   root_dir = util.root_pattern(table.unpack(root_files)),
   settings = {
+    pyright = {
+      -- defer to ruff-lsp
+      disableOrganizeImports = true,
+    },
     python = {
       analysis = {
         typeshedPaths = {
