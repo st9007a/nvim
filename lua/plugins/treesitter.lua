@@ -25,6 +25,7 @@ return {
         "python",
         "tsx",
         "typescript",
+        "vimdoc",
       },
     },
     config = function(_, opts)
