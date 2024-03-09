@@ -1,7 +1,7 @@
 -- switch between windows
 vim.keymap.set("n", "<Tab>", "<C-w>w")
 
-vim.keymap.set("n", "`", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "`", ":Neotree toggle position=current<CR>")
 
 -- Telescope.nvim key bindings
 vim.keymap.set("n", "<space>b", ":Telescope buffers<CR>")
