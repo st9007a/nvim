@@ -67,8 +67,12 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter",
+      "lewis6991/gitsigns.nvim",
     },
     opts = {
+      code_action = {
+        extend_gitsigns = true,
+      },
       rename = {
         quit = "<ESC>",
       },
