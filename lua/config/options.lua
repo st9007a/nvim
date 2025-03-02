@@ -1,4 +1,4 @@
-vim.o.mouse = nil
+vim.o.mouse = ''
 vim.o.incsearch = true
 vim.o.hlsearch = false
 vim.o.inccommand = 'nosplit'
