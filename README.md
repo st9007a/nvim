@@ -2,7 +2,7 @@
 
 ## Compatibility
 
-The configuration is built with NeoVim v0.9.4.
+The configuration is built with NeoVim v0.10.4.
 
 ## Dependencies
 
